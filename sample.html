@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* example */
+        .container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Two columns, the first takes 1/4 and the second takes 3/4 of the available space */
+  grid-template-rows: auto 1fr auto; /* Three rows, the first and last rows adjust to content, the middle row takes the remaining space */
+  gap: 10px; /* Add a 10px gap between grid items */
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+header, nav, main, aside, footer {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+header {
+  grid-column: 1 / span 2; /* Header spans both columns */
+}
+
+nav {
+  grid-column: 1;
+  grid-row: 2; /* Nav starts at the second row */
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2; /* Main content starts at the second row */
+}
+
+aside {
+  grid-column: 1;
+  grid-row: 3; /* Aside content starts at the third row */
+}
+
+footer {
+  grid-column: 1 / span 2; /* Footer spans both columns */
+}
+
+    </style>
+</head>
+<body>
+
+    <!--example -->
+    <div class="container">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main Content</main>
+        <aside>Aside Content</aside>
+        <footer>Footer</footer>
+      </div>
+</body>
+</html>
